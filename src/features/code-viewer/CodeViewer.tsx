@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProjectFile } from '../../types';
-import { ArrowUpRight, ArrowDownLeft, FileText, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, ArrowDownLeft, FileText } from 'lucide-react';
 
 interface CodeViewerProps {
   file: ProjectFile | null;

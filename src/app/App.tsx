@@ -6,11 +6,27 @@ import {
   GitFork,
   Sparkles,
   SearchCode,
-  Github,
   ArrowRight,
   Terminal,
   ExternalLink,
 } from 'lucide-react';
+
+const GitHubIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
+  <svg
+    viewBox="0 0 24 24"
+    width="16"
+    height="16"
+    stroke="currentColor"
+    strokeWidth="2"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+  </svg>
+);
 
 export const App: React.FC = () => {
   return (
@@ -46,7 +62,7 @@ export const App: React.FC = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-graphite-900 transition-colors"
             >
-              <Github className="w-4 h-4" />
+              <GitHubIcon className="w-4 h-4" />
               <span className="font-mono text-xs">GitHub</span>
             </a>
             <a
@@ -89,7 +105,7 @@ export const App: React.FC = () => {
               rel="noopener noreferrer"
               className="px-5 py-2.5 rounded-md bg-white border border-graphite-200 text-graphite-700 font-mono text-xs font-medium hover:border-graphite-300 hover:bg-graphite-50 transition-colors flex items-center gap-2"
             >
-              <Github className="w-4 h-4" />
+              <GitHubIcon className="w-4 h-4" />
               <span>Посмотреть на GitHub</span>
             </a>
           </div>
@@ -138,7 +154,7 @@ export const App: React.FC = () => {
                 <Sparkles className="w-5 h-5 text-indigo-600 mb-3" />
                 <h3 className="font-semibold text-sm text-graphite-900">Сборка контекста для LLM</h3>
                 <p className="text-xs text-graphite-500 mt-2 leading-relaxed">
-                  Детерминированный обход дерева модулей с дедупликацией и оценкой числа токенов для вставки в ChatGPT или Claude.
+                  Детерминированный обход дерева модулей с дедупликацией и оценкой числа токенов для вставки в нейросети.
                 </p>
               </div>
               <div className="mt-4 p-2 bg-white rounded border border-graphite-100 font-mono text-[10px] text-graphite-500">
@@ -165,7 +181,7 @@ export const App: React.FC = () => {
       {/* Интерактивное демо */}
       <InteractiveDemo />
 
-      {/* Секция быстрого старта и локального запуска */}
+      {/* Секция быстрого старта */}
       <section id="quickstart" className="py-14 border-t border-graphite-200 bg-surface">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-graphite-400 mb-2 font-semibold">
@@ -176,7 +192,7 @@ export const App: React.FC = () => {
             Как установить и запустить инструмент
           </h2>
           <p className="text-xs sm:text-sm text-graphite-600 mb-6">
-            Проект представляет собой полностью статический React SPA без бэкенда, БД или сторонних аналитических трекеров.
+            Проект представляет собой полностью статический React SPA без бэкенда, БД или внешних серверов.
           </p>
 
           <div className="bg-graphite-900 text-graphite-100 p-4 rounded-lg font-mono text-xs space-y-2 overflow-x-auto shadow-inner">
@@ -206,10 +222,11 @@ export const App: React.FC = () => {
               href={SITE_CONFIG.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-graphite-900 flex items-center gap-1"
+              className="hover:text-graphite-900 flex items-center gap-1.5"
             >
+              <GitHubIcon className="w-3.5 h-3.5" />
               <span>GitHub Repository</span>
-              <ExternalLink className="w-3 h-3" />
+              <ExternalLink className="w-3 h-3 ml-0.5" />
             </a>
             <span>MIT License</span>
           </div>
