@@ -9,7 +9,7 @@ export interface SiteConfig {
 }
 
 export const SITE_CONFIG: SiteConfig = {
-  appName: 'CodeGraph',
+  appName: 'CodeMap',
   tagline: 'Understand your codebase. See how everything connects.',
   description:
     'Исследуйте структуру проекта, находите связи между файлами и собирайте релевантный контекст для работы с LLM.',
