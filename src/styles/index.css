@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-canvas text-graphite-800 font-sans antialiased selection:bg-brand-100 selection:text-brand-700;
+  }
+}
+
+.react-flow__attribution {
+  display: none !important;
+}
