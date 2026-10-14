@@ -14,7 +14,7 @@ export const SITE_CONFIG: SiteConfig = {
   description:
     'Исследуйте структуру проекта, находите связи между файлами и собирайте релевантный контекст для работы с LLM.',
   // До подтверждения реального адреса используется placeholder
-  githubUrl: 'https://github.com/placeholder-organization/codegraph',
+  githubUrl: 'https://github.com/CiderlyApp/CodeMapSite',
   hasVerifiedRepo: false,
   navLinks: [
     { label: 'Возможности', href: '#features' },
